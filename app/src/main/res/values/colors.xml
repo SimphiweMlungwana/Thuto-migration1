@@ -13,4 +13,5 @@
     <color name="maroon_colour">#FF561217</color>
     <color name="button_theme_colour">#13574B</color>
     <color name="summary_color">#97E1B864</color>
+    <color name="score_color">#2C6E63</color>
 </resources>
