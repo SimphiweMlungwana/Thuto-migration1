@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!--Side Images St-->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:src="@drawable/splash_corner"
+        android:id="@+id/right_design"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/splash_corner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+    <!--Side Images En-->
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/random_person"
+        android:background="@drawable/rectangle_background"
+        android:scaleType="centerCrop"
+        android:id="@+id/profile_photo"/>
+
+    <TextView
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="28dp"
+        android:text="Hello,"
+        android:fontFamily="@font/mali_regular"
+        android:textSize="28dp"
+        android:textColor="@color/summary_color"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/profile_photo"
+        android:id="@+id/welcome_text_hello"/>
+
+    <TextView
+        android:layout_width="189dp"
+        android:layout_height="52dp"
+        android:text="Nathaniel"
+        android:fontFamily="@font/mali_bold"
+        android:textSize="34dp"
+        android:textColor="@color/maroon_colour"
+        android:layout_below="@id/welcome_text_hello"
+        android:layout_toRightOf="@id/profile_photo"
+        android:layout_marginStart="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="94dp"
+        android:background="@color/summary_color"
+        android:id="@+id/score_summary"
+        android:layout_marginStart="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profile_photo"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:src="@drawable/baseline_star_rate_24"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

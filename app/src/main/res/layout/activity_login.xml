@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcccc"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="thutoEdu"
+        android:textSize="36dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:id="@+id/txtthuto"
+        />
+
+    <ImageView
+        android:layout_width="221dp"
+        android:layout_height="214dp"
+        android:src="@drawable/girl_landing_1"
+        android:id="@+id/girlLauncher"
+        android:layout_below="@id/txtthuto"
+        android:layout_centerInParent="true"
+        android:paddingVertical="20dp"/>
+
+
+    <!--Email layout-->
+    <RelativeLayout
+        android:layout_width="332dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/girlLauncher"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailgroup"
+        >
+
+        <EditText
+            android:layout_width="330dp"
+            android:layout_height="68dp"
+            android:id="@+id/inpEmail"
+            android:fontFamily="@font/mali_semibold"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="18dp"/>
+
+    </RelativeLayout>
+
+    <!--Password group-->
+    <RelativeLayout
+        android:layout_width="332dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/emailgroup"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="16dp"
+        android:id="@+id/passgroup">
+
+
+        <EditText
+            android:layout_width="330dp"
+            android:layout_height="100dp"
+            android:id="@+id/inppass"
+            android:fontFamily="@font/mali_semibold"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="164sp"
+        android:layout_height="24sp"
+        android:text="Forgot Your Password"
+        android:fontFamily="@font/mali_bold"
+        android:textColor="@color/maroon_colour"
+        android:id="@+id/txtforgotpass"
+        android:layout_below="@id/passgroup"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:background="#336666"
+        android:fontFamily="@font/mali_bold"
+        android:layout_below="@id/txtforgotpass"
+        android:layout_centerHorizontal="true"
+        android:width="220dp"
+        android:height="50dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnLogin"/>
+
+    <TextView
+        android:layout_width="164sp"
+        android:layout_height="24sp"
+        android:text="Or sign in using"
+        android:fontFamily="@font/mali_semibold"
+        android:textColor="@color/maroon_colour"
+        android:layout_marginHorizontal="150dp"
+        android:id="@+id/txtaltsigin"
+        android:layout_below="@id/btnLogin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtaltsigin"
+        android:layout_marginHorizontal="60dp"
+        android:paddingVertical="20dp"
+        android:id="@+id/logonbuttons">
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="58dp"
+            android:text="Apple"
+            android:fontFamily="@font/mali_semibold"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnApple"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="58dp"
+            android:text="Google"
+            android:layout_toRightOf="@id/btnApple"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="@font/mali_semibold"
+            android:id="@+id/btngoogle"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="80dp"
+        android:text="Continue as Guest"
+        android:textSize="16sp"
+        android:textColor="#FFF8B735"
+        android:fontFamily="@font/mali_bold"
+        android:layout_marginHorizontal="150dp"
+        android:layout_alignBottom="@id/logonbuttons"
+        android:textStyle="bold"
+        android:id="@+id/guestsignin"
+        />
+
+</RelativeLayout>

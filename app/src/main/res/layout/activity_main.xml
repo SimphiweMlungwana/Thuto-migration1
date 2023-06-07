@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcccc"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="thutoEdu"
+        android:textSize="36dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:id="@+id/txtthuto"
+      />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/splash_corner"
+        android:id="@+id/right_design"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <ImageView
+        android:layout_width="316dp"
+        android:layout_height="322dp"
+        android:src="@drawable/girl_landing_1"
+        android:id="@+id/girlLauncher"
+        android:layout_below="@id/txtthuto"
+        android:layout_centerInParent="true"
+        android:paddingVertical="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover the world one quiz at a time"
+        android:textSize="21dp"
+        android:fontFamily="@font/mali_regular"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/girlLauncher"
+        android:id="@+id/slogan"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:fontFamily="@font/mali_bold"
+        android:background="#336666"
+        android:layout_centerHorizontal="true"
+        android:width="220dp"
+        android:height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/girlLauncher"
+        android:id="@+id/btnReg"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:background="#336666"
+        android:fontFamily="@font/mali_bold"
+        android:layout_below="@id/btnReg"
+        android:layout_centerHorizontal="true"
+        android:width="220dp"
+        android:height="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnLogin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue as Guest"
+        android:textSize="16sp"
+        android:textColor="#FFF8B735"
+        android:fontFamily="@font/mali_bold"
+        android:layout_alignBottom="@id/btnReg"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:id="@+id/guestsignin"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/splash_corner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>

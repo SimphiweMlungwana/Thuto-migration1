@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "243373118247",
+    "project_id": "thutoapp-1f2ac",
+    "storage_bucket": "thutoapp-1f2ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243373118247:android:5610410a200d4bc3b0cf02",
+        "android_client_info": {
+          "package_name": "com.css.thutoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqnj4905ELFjK1h5yxjeKii-1Og82V8vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
