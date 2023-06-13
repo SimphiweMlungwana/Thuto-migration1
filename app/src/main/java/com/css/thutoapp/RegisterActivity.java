@@ -10,5 +10,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        etxtmail = findViewById(R.id.edTextEmail);
+        etxtpassword = findViewById(R.id.edTextPassword);
     }
 }

@@ -14,13 +14,13 @@ public class ActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button homefragmentnxt = findViewById(R.id.btngoogle);
+        Button mainactivitynxt = findViewById(R.id.btngoogle);
 
-        homefragmentnxt.setOnClickListener(new View.OnClickListener() {
+        mainactivitynxt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View vhm) {
-                Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
-                startActivity(intent);
+            public void onClick(View mv) {
+                Intent mIntent = new Intent(ActivityLogin.this, MainLandingActivity.class);
+                startActivity(mIntent);
             }
         });
     }
