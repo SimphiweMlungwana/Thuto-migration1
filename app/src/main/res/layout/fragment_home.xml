@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_theme_main"
     tools:context=".HomeFragment">
-
 
     <!--Side Images St-->
     <ImageView
@@ -14,8 +14,8 @@
         android:src="@drawable/splash_corner"
         android:id="@+id/right_design"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        />
+        android:layout_alignParentRight="true"/>
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="160dp"
@@ -208,8 +208,7 @@
         android:layout_alignStart="@id/category_txt"
         android:layout_below="@id/score_summary"
         android:layout_marginTop="80dp"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
 
         <!--Category blocks st-->
         <RelativeLayout

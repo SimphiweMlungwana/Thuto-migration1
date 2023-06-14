@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_theme_main"
+    tools:context=".CategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_shape_category"
+        android:id="@+id/quiz_options">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/landmark_exmpl1"
+            android:layout_marginStart="20dp"
+            android:id="@+id/opt1_photo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Landmarks"
+            android:fontFamily="@font/mali_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/button_theme_colour"
+            android:layout_toEndOf="@id/opt1_photo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/quiz_heading"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 Questions"
+            android:fontFamily="@font/mali_regular"
+            android:textSize="12sp"
+            android:textColor="@color/maroon_colour"
+            android:layout_toEndOf="@id/opt1_photo"
+            android:layout_below="@id/quiz_heading"
+            android:layout_marginStart="20dp"
+            android:id="@+id/quiz_number"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 Seconds"
+            android:fontFamily="@font/mali_regular"
+            android:textSize="12sp"
+            android:textColor="@color/button_theme_colour"
+            android:layout_toEndOf="@id/opt1_photo"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/quiz_number"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
