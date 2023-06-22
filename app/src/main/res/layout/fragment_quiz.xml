@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_theme_main"
+    tools:context=".QuizFragment">
+
+    <!--Side Images St-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/splash_corner_large_up"
+        android:id="@+id/right_design_q1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:src="@drawable/splash_corner_large"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/right_design_q2"/>
+    <!--Side Images En-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/quiz_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz Name"
+            android:textSize="21dp"
+            android:fontFamily="@font/mali_bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/maroon_colour"
+            android:id="@+id/quiz_name"/>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_shape_quizcounter"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/quiz_name"
+            android:id="@+id/quiz_timer_bckground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 2/10"
+                android:fontFamily="@font/mali_bold"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="110px"
+            android:layout_height="110px"
+            android:src="@drawable/timer_design"
+            android:layout_below="@+id/quiz_timer_bckground"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/counter_clock"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/quiz_clue_photo"
+        android:layout_below="@id/quiz_layout"
+        android:layout_marginTop="25dp"
+        android:id="@+id/main_quiz_photo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Where is the largest volcano on Earth located?"
+        android:fontFamily="@font/mali_medium"
+        android:textSize="25sp"
+        android:textColor="@color/maroon_colour"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_below="@id/main_quiz_photo"
+        android:id="@+id/txt_quiz"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:layout_below="@id/txt_quiz"
+        android:id="@+id/chkbx_btns_layout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Canada"
+            android:id="@+id/answ1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hawaii"
+            android:textColor="@color/button_theme_colour"
+            android:backgroundTint="@color/white"
+            android:id="@+id/answ2"
+            android:layout_below="@id/answ1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Greenland"
+            android:textColor="@color/button_theme_colour"
+            android:backgroundTint="@color/white"
+            android:id="@+id/answ3"
+            android:layout_below="@id/answ2"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zimbabwe"
+            android:textColor="@color/button_theme_colour"
+            android:backgroundTint="@color/white"
+            android:layout_below="@id/answ3"
+            android:id="@+id/answ4"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:fontFamily="@font/mali_bold"
+        android:pointerIcon="arrow"
+        android:background="@drawable/round_shape_btnnxt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/chkbx_btns_layout"
+        android:layout_marginTop="25dp"/>
+
+</RelativeLayout>

@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:text="thutoEdu"
         android:textSize="36dp"
         android:fontFamily="sans-serif-black"
@@ -28,46 +28,26 @@
         android:layout_centerInParent="true"
         android:paddingVertical="20dp"/>
 
-
-    <!--Email layout-->
-    <RelativeLayout
-        android:layout_width="332dp"
-        android:layout_height="78dp"
+    <EditText
+        android:id="@+id/inpEmail"
+        android:layout_width="330dp"
+        android:layout_height="68dp"
         android:layout_below="@id/girlLauncher"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/emailgroup"
-        >
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/mali_semibold"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_centerHorizontal="true"/>
 
-        <EditText
-            android:layout_width="330dp"
-            android:layout_height="68dp"
-            android:id="@+id/inpEmail"
-            android:fontFamily="@font/mali_semibold"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingVertical="18dp"/>
-
-    </RelativeLayout>
-
-    <!--Password group-->
-    <RelativeLayout
-        android:layout_width="332dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/emailgroup"
-        android:layout_centerHorizontal="true"
-        android:paddingVertical="16dp"
-        android:id="@+id/passgroup">
-
-
-        <EditText
-            android:layout_width="330dp"
-            android:layout_height="100dp"
-            android:id="@+id/inppass"
-            android:fontFamily="@font/mali_semibold"
-            android:hint="Password"
-            android:inputType="textPassword"/>
-
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/inppass"
+        android:layout_width="330dp"
+        android:layout_height="68dp"
+        android:layout_below="@id/inpEmail"
+        android:fontFamily="@font/mali_semibold"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="164sp"
@@ -76,16 +56,16 @@
         android:fontFamily="@font/mali_bold"
         android:textColor="@color/maroon_colour"
         android:id="@+id/txtforgotpass"
-        android:layout_below="@id/passgroup"
+        android:layout_below="@id/inppass"
         android:layout_alignParentRight="true"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign In"
-        android:background="#336666"
         android:fontFamily="@font/mali_bold"
         android:layout_below="@id/txtforgotpass"
+        android:background="@drawable/round_shape_btnnxt"
         android:layout_centerHorizontal="true"
         android:width="220dp"
         android:height="50dp"
@@ -115,6 +95,7 @@
             android:layout_height="58dp"
             android:text="Apple"
             android:fontFamily="@font/mali_semibold"
+            android:background="@drawable/round_shape_btnnxt"
             android:layout_marginLeft="5dp"
             android:id="@+id/btnApple"/>
 
@@ -124,21 +105,9 @@
             android:text="Google"
             android:layout_toRightOf="@id/btnApple"
             android:layout_marginLeft="6dp"
+            android:background="@drawable/round_shape_btnnxt"
             android:fontFamily="@font/mali_semibold"
             android:id="@+id/btngoogle"/>
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="500dp"
-        android:layout_height="80dp"
-        android:text="Continue as Guest"
-        android:textSize="16sp"
-        android:textColor="#FFF8B735"
-        android:fontFamily="@font/mali_bold"
-        android:layout_marginHorizontal="150dp"
-        android:layout_alignBottom="@id/logonbuttons"
-        android:textStyle="bold"
-        android:id="@+id/guestsignin"
-        />
 
 </RelativeLayout>

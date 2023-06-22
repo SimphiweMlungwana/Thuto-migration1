@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_theme_main"
+    tools:context=".ResultFragment">
+
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:src="@drawable/splash_corner"
+        android:id="@+id/right_design"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/results_txt" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz Result"
+                android:textSize="21sp"
+                android:fontFamily="@font/mali_bold"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/maroon_colour"
+                android:id="@+id/quiz_res_txt"/>
+
+
+        </RelativeLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="216dp"
+        android:src="@drawable/quiz_results_medal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/results_txt"
+        android:layout_marginTop="30dp"
+        android:id="@+id/medal_pht"/>
+
+
+    <TextView
+        android:id="@+id/result_congrats_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/medal_pht"
+        android:fontFamily="@font/mali_bold"
+        android:layout_centerHorizontal="true"
+        android:text="Congratulations"
+        android:textColor="@color/maroon_colour"
+        android:layout_marginTop="5dp"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Points Earned"
+        android:textSize="16sp"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/score_color"
+        android:layout_below="@id/result_congrats_txt"
+        android:layout_marginTop="8dp"
+        android:id="@+id/points_earned_txt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+80"
+        android:textSize="24sp"
+        android:fontFamily="@font/mali_medium"
+        android:textColor="@color/summary_color"
+        android:layout_below="@id/points_earned_txt"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/no_of_points_txt"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_of_points_txt"
+        android:paddingStart="15dp"
+        android:id="@+id/summary_blocks">
+
+        <!--Category blocks st-->
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_shape"
+            android:id="@+id/category_block1"
+            android:paddingStart="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Correct Answers"
+                android:fontFamily="@font/mali_bold"
+                android:textSize="13sp"
+                android:textColor="@color/score_color"
+                android:id="@+id/cat_txt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="15 Quizzes"
+                android:fontFamily="@font/mali_regular"
+                android:textColor="@color/maroon_colour"
+                android:textSize="10sp"
+                android:layout_marginTop="25sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_shape"
+            android:id="@+id/category_block2"
+            android:paddingStart="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/category_block1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Incorrect Answers"
+                android:fontFamily="@font/mali_bold"
+                android:textSize="13sp"
+                android:textColor="@color/score_color"
+                android:id="@+id/cat_txt1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:fontFamily="@font/mali_regular"
+                android:textColor="@color/maroon_colour"
+                android:textSize="10sp"
+                android:layout_marginTop="25sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_shape"
+            android:id="@+id/category_block3"
+            android:paddingStart="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/category_block1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Skipped"
+                android:fontFamily="@font/mali_bold"
+                android:textSize="13sp"
+                android:textColor="@color/score_color"
+                android:id="@+id/cat_txt2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:fontFamily="@font/mali_regular"
+                android:textColor="@color/maroon_colour"
+                android:textSize="10sp"
+                android:layout_marginTop="25sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_shape"
+            android:id="@+id/category_block4"
+            android:paddingStart="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/category_block1"
+            android:layout_toEndOf="@id/category_block1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Completion"
+                android:fontFamily="@font/mali_bold"
+                android:textSize="13sp"
+                android:textColor="@color/score_color"
+                android:id="@+id/cat_txt3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="90%"
+                android:fontFamily="@font/mali_regular"
+                android:textColor="@color/maroon_colour"
+                android:textSize="10sp"
+                android:layout_marginTop="25sp"/>
+        </RelativeLayout>
+        <!--Category blocks en-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btm_btns"
+        android:paddingStart="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/summary_blocks">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:fontFamily="@font/mali_bold"
+            android:background="@drawable/round_shape_btnnxt"
+            android:id="@+id/btnshare"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Take New Quiz"
+            android:textSize="13sp"
+            android:fontFamily="@font/mali_bold"
+            android:background="@drawable/round_shape_btnnxt"
+            android:layout_toEndOf="@id/btnshare"
+            android:layout_marginStart="20dp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

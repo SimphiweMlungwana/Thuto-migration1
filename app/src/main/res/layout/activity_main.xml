@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffcccc"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:id="@+id/txtthuto"
-      />
+        />
 
     <ImageView
         android:layout_width="150dp"
@@ -55,19 +57,19 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:fontFamily="@font/mali_bold"
-        android:background="#336666"
         android:layout_centerHorizontal="true"
         android:width="220dp"
         android:height="50dp"
         android:layout_marginTop="50dp"
         android:layout_below="@id/girlLauncher"
+        android:background="@drawable/round_shape_btnnxt"
         android:id="@+id/btnReg"
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign In"
-        android:background="#336666"
+        android:background="@drawable/round_shape_btnnxt"
         android:fontFamily="@font/mali_bold"
         android:layout_below="@id/btnReg"
         android:layout_centerHorizontal="true"
@@ -77,17 +79,19 @@
         android:id="@+id/btnLogin"/>
 
     <TextView
+        android:id="@+id/guestsignin_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continue as Guest"
-        android:textSize="16sp"
-        android:textColor="#FFF8B735"
-        android:fontFamily="@font/mali_bold"
-        android:layout_alignBottom="@id/btnReg"
+        android:layout_alignBottom="@id/btnLogin"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:id="@+id/guestsignin"
-        />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-69dp"
+        android:fontFamily="@font/mali_bold"
+        android:text="Continue as Guest"
+        android:textColor="#FFF8B735"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="160dp"
