@@ -45,7 +45,7 @@ public class ActivityLogin extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(ActivityLogin.this, "Login successful", Toast.LENGTH_SHORT).show();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+                                startActivity(new Intent(ActivityLogin.this, MainLandingActivity.class));
                                 finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {

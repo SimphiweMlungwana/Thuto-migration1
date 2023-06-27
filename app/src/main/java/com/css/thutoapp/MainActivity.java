@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(regIntent);
             }
         });
+
+        guestLoginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(MainActivity.this, QuestionListActivity.class));
+                startActivity(new Intent(MainActivity.this, MainLandingActivity.class));
+            }
+        });
+
 
 
     }

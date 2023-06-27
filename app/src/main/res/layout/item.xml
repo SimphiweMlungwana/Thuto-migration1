@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="120dp"
+        android:background="@drawable/round_shape"
+        android:id="@+id/category_block"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:src="@drawable/catergory_pic1"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cat_pic1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Geography"
+            android:fontFamily="@font/mali_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/maroon_colour"
+            android:id="@+id/cat_txt"
+            android:layout_below="@id/cat_pic1"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/no_of_quiz_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="15 Quizzes"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/mali_regular"
+            android:textColor="@color/score_color"
+            android:textSize="10sp"
+            android:layout_below="@id/cat_pic1"
+            android:layout_marginTop="25sp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

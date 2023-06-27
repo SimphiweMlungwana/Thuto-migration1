@@ -13,14 +13,16 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/round_shape_category"
-        android:id="@+id/quiz_options">
+        android:id="@+id/quiz_options"
+        android:clickable="true">
 
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/landmark_exmpl1"
             android:layout_marginStart="20dp"
-            android:id="@+id/opt1_photo"/>
+            android:id="@+id/opt1_photo"
+            android:clickable="true"/>
 
         <TextView
             android:layout_width="match_parent"
