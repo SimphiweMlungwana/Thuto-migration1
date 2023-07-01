@@ -41,6 +41,7 @@ public class ActivityLogin extends AppCompatActivity {
 
                 if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     if(!pass.isEmpty()){
+                        loginBtn.setEnabled(true);
                         auth.signInWithEmailAndPassword(email,pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
@@ -54,10 +55,11 @@ public class ActivityLogin extends AppCompatActivity {
                                 Toast.makeText(ActivityLogin.this, "Login failed", Toast.LENGTH_SHORT).show();
                             }
                         });
-                    } else if (email.isEmpty()) {
-                        loginMail.setError("Email cannot empty");
+                    } else if (email.isEmpty() && pass.isEmpty()) {
+                        loginBtn.setEnabled(false);
+                        Toast.makeText(ActivityLogin.this,"Empty fields",Toast.LENGTH_SHORT).show();
                     }else {
-                        loginMail.setError("Enter correct mail");
+                        Toast.makeText(ActivityLogin.this,"Enter correct email & password",Toast.LENGTH_SHORT).show();
                     }
                 }
             }

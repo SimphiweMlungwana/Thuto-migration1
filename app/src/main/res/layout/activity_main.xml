@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffcccc"
+    android:background="@color/background_theme_main"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -61,6 +61,7 @@
         android:width="220dp"
         android:height="50dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/button_primary"
         android:layout_below="@id/girlLauncher"
         android:background="@drawable/round_shape_btnnxt"
         android:id="@+id/btnReg"
@@ -70,6 +71,7 @@
         android:layout_height="wrap_content"
         android:text="Sign In"
         android:background="@drawable/round_shape_btnnxt"
+        android:backgroundTint="@color/button_primary"
         android:fontFamily="@font/mali_bold"
         android:layout_below="@id/btnReg"
         android:layout_centerHorizontal="true"
@@ -92,11 +94,5 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="160dp"
-        android:src="@drawable/splash_corner"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"/>
 
 </RelativeLayout>

@@ -2,6 +2,8 @@ package com.css.thutoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,6 +85,7 @@ public class QuizScreenActivity extends AppCompatActivity {
                 if(quizModalArrayList.get(currentPos).getAnswer().trim().toLowerCase().
                         equals(option4btn.getText().toString().trim().toLowerCase())){
                     currentScore = currentScore+10;
+
                 }
                 questionAttempted++;
                 currentPos = random.nextInt(quizModalArrayList.size());
@@ -91,14 +94,25 @@ public class QuizScreenActivity extends AppCompatActivity {
         });
     }
 
+    private void showDialog(){
+        Dialog dialog = new Dialog(this);
+    }
     private void sendDataToViews(int currentPos) {
-        questionNumberTV.setText("Question attempted: "+questionAttempted+"/5");
-        questionTV.setText(quizModalArrayList.get(currentPos).getQuestion());
-
-        option1btn.setText(quizModalArrayList.get(currentPos).getOption1());
-        option2btn.setText(quizModalArrayList.get(currentPos).getOption2());
-        option3btn.setText(quizModalArrayList.get(currentPos).getOption3());
-        option4btn.setText(quizModalArrayList.get(currentPos).getOption4());
+        questionNumberTV.setText("Question: "+questionAttempted +"/5");
+        if(questionAttempted==5){
+            Intent qtorintent = new Intent(QuizScreenActivity.this, ResultsActivity.class);
+            qtorintent.putExtra("score",currentScore);
+            qtorintent.putExtra("correct_ans",currentScore/10);
+            qtorintent.putExtra("attemptedquizes",questionAttempted);
+            qtorintent.putExtra("percentcomplete",(questionAttempted/5)*100);
+            startActivity(qtorintent);
+        }else{
+            questionTV.setText(quizModalArrayList.get(currentPos).getQuestion());
+            option1btn.setText(quizModalArrayList.get(currentPos).getOption1());
+            option2btn.setText(quizModalArrayList.get(currentPos).getOption2());
+            option3btn.setText(quizModalArrayList.get(currentPos).getOption3());
+            option4btn.setText(quizModalArrayList.get(currentPos).getOption4());
+        }
 
     }
 
@@ -109,7 +123,7 @@ public class QuizScreenActivity extends AppCompatActivity {
                 "Senegal","Cameroon","South Africa","Ghana","South Africa"));
         quizModalArrayList.add(new QuizModal(" Which of the following African countries is best in Athletics?",
                 "Botswana","South Africa","Kenya","Ethiopia","Kenya"));
-        quizModalArrayList.add(new QuizModal(" Which of the following African sprinters has been dubbed the next Usain Bolt?",
+        quizModalArrayList.add(new QuizModal("Which of the following African sprinters has been dubbed the next Usain Bolt?",
                 "Trayvon Bromells","Letsile Tebogo","Blessing Akwasi","Bouwahjgie Nkrumie","Letsile Tebogo"));
         quizModalArrayList.add(new QuizModal(" Which one of the following won Miss Universe 2019 and one of the things she is passionate\n" +
                 "about is teaching young girls to ‘take up space'?",

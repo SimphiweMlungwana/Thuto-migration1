@@ -34,7 +34,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="1500dp"
-        android:background="@color/white"
+        android:background="@drawable/round_shape_reg_settings"
         android:layout_below="@id/txtthuto"
         android:layout_marginTop="30dp"
         android:id="@+id/view_whtbcg">
@@ -90,6 +90,7 @@
                 android:background="@drawable/rectangle_textbox"
                 android:hint="First and Last Name"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:fontFamily="@font/mali_regular"
                 android:padding="6dp"
                 android:layout_marginBottom="16dp" />
@@ -100,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_textbox"
                 android:padding="6dp"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:hint="Email"
                 android:fontFamily="@font/mali_regular"
@@ -112,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:textColor="@color/black"
                 android:background="@drawable/rectangle_textbox"
                 android:padding="6dp"
                 android:inputType="textPassword"

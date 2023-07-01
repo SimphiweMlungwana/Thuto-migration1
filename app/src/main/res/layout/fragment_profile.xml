@@ -1,14 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/settings_bckgr"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment" />
+        android:layout_height="360dp"
+        android:background="@drawable/settings_background">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/profile_set_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mali_bold"
+            android:text="Profile"
+            android:textColor="@color/maroon_colour"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/profile_photo_main"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profile_set_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="151dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/oval_imageview"
+            android:src="@drawable/random_person" />
+
+        <TextView
+            android:id="@+id/profile_main_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_photo_main"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mali_bold"
+            android:text="Nathaniel Smith"
+            android:textAlignment="center"
+            android:textColor="@color/maroon_colour"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_main_name_txt"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/mali_semibold"
+            android:text="nathaniel.smith@example.com"
+            android:textColor="@color/score_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        android:layout_below="@id/settings_bckgr"
+        android:layout_marginTop="-55dp"
+        android:background="@drawable/round_shape_reg_settings">
+
+        <RelativeLayout
+            android:id="@+id/p_dets_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/pd_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_details_ic" />
+
+            <TextView
+                android:id="@+id/p_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/pd_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Personal Details"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/location_layout"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p_dets_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/loc_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/loc_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Location"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+        </RelativeLayout>
+
+        <!--Another one-->
+        <RelativeLayout
+            android:id="@+id/quiz_hist_layout"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/stats_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stats_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/stats_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Statistics"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stats_layout"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quiz_hist_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/quiz_h_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/quiz_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/quiz_h_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Quiz History"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lang_layout"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stats_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/langua_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lang_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/langua_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Language"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/theme_sel_layout"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lang_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/theme_sel_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/theme_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/theme_sel_ic"
+                android:fontFamily="@font/mali_medium"
+                android:text="Theme Mode"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/personal_details_slt_ic" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next_quiz"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/theme_sel_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/mali_bold"
+            android:text="Log Out" />
+
+    </RelativeLayout>
+</RelativeLayout>
