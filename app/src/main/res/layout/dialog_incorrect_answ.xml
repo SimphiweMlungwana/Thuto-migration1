@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_theme_main"
+    android:id="@+id/IncorrectAnsLayout">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/quiz_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect Answer"
+            android:textSize="21dp"
+            android:fontFamily="@font/mali_bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/error_color"
+            android:id="@+id/incorrect_view_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where is the largest volcano on Earth located?"
+            android:fontFamily="@font/mali_medium"
+            android:textSize="20sp"
+            android:textColor="@color/maroon_colour"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_below="@id/incorrect_view_txt"
+            android:id="@+id/txt_quiz"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct Answer"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_below="@id/txt_quiz"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mali_bold"
+            android:textColor="@color/button_theme_colour"
+            android:textSize="13sp"
+            android:id="@+id/crct_st_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canada"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mali_regular"
+            android:textSize="16sp"
+            android:textColor="@color/maroon_colour"
+            android:layout_below="@id/crct_st_txt"
+            android:id="@+id/crct_dyn_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mali_semibold"
+            android:textSize="20sp"
+            android:textColor="@color/maroon_colour"
+            android:layout_below="@+id/crct_dyn_txt"
+            android:id="@+id/crct_st_description_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet consectetur. Odio rhoncus nisl ut ipsum proin. Amet pellentesque eget proin bibendum nibh pharetra. Tincidunt ridiculus diam nunc blandit viverra. Ipsum faucibus mi massa id nunc."
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_below="@id/crct_st_description_txt"
+            android:id="@+id/crct_dyn_descript_txt"/>
+
+    <Button
+        android:id="@+id/btn_dismiss_view_inc"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_shape_btnnxt"
+        android:fontFamily="@font/mali_bold"
+        android:text="Dismiss"
+        android:layout_below="@id/crct_dyn_descript_txt"/>
+    </RelativeLayout>
+
+</RelativeLayout>

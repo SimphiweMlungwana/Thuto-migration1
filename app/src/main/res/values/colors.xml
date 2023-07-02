@@ -14,4 +14,5 @@
     <color name="button_theme_colour">#13574B</color>
     <color name="summary_color">#97E1B864</color>
     <color name="score_color">#2C6E63</color>
+    <color name="error_color">#B71C1C</color>
 </resources>

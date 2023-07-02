@@ -219,7 +219,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Share"
+            android:text="Home"
             android:fontFamily="@font/mali_bold"
             android:background="@drawable/round_shape_btnnxt"
             android:id="@+id/btnshare"/>

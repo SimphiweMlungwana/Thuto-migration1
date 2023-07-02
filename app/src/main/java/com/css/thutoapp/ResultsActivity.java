@@ -10,17 +10,13 @@ import android.widget.TextView;
 
 public class ResultsActivity extends AppCompatActivity {
 
+    public static String currentScore;
+    public static String attemptedquiz;
+    public static String percentcompl;
+    public static String correct_answ;
+    public static String incorrectans;
     Button btnRepeatQuiz;
     TextView correctAnsTV, incorrectAnsTV, completPercTV, pointAccum;
-
-    //QuizScreenActivity quizScreenActivity = new QuizScreenActivity();
-    Intent QuizActIntent = getIntent();
-    String currentScore = QuizActIntent.getStringExtra("score");
-    int attemptedquiz = QuizActIntent.getIntExtra("attemptedquizes",0);
-    double percentcompl = QuizActIntent.getDoubleExtra("percentcomplete",0);
-    int correct_answ = QuizActIntent.getIntExtra("correct_ans",0);
-    int incorrectans = 5-correct_answ;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +24,12 @@ public class ResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_results);
 
         btnRepeatQuiz = findViewById(R.id.btn_take_newquiz);
+
+        Intent QIntent = getIntent();
+        currentScore = QIntent.getStringExtra(currentScore);
+        attemptedquiz = QIntent.getStringExtra(attemptedquiz);
+        percentcompl = QIntent.getStringExtra(percentcompl);
+        correct_answ = QIntent.getStringExtra(correct_answ);
 
         correctAnsTV = findViewById(R.id.correct_txt);
         incorrectAnsTV = findViewById(R.id.incorrect_txt);
@@ -37,7 +39,7 @@ public class ResultsActivity extends AppCompatActivity {
         pointAccum.setText("+"+currentScore+" points");
         correctAnsTV.setText(correct_answ);
         incorrectAnsTV.setText(incorrectans);
-        completPercTV.setText((int) percentcompl);
+        completPercTV.setText(percentcompl+"%");
 
 
 
