@@ -15,7 +15,7 @@ public class ResultsActivity extends AppCompatActivity {
     public static String percentcompl;
     public static String correct_answ;
     public static String incorrectans;
-    Button btnRepeatQuiz;
+    Button btnRepeatQuiz, btnHome;
     TextView correctAnsTV, incorrectAnsTV, completPercTV, pointAccum;
 
     @Override
@@ -24,6 +24,7 @@ public class ResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_results);
 
         btnRepeatQuiz = findViewById(R.id.btn_take_newquiz);
+        btnHome = findViewById(R.id.btn_take_newquiz);
 
         Intent QIntent = getIntent();
         currentScore = QIntent.getStringExtra(currentScore);
@@ -48,6 +49,13 @@ public class ResultsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent rtoqintent = new Intent(ResultsActivity.this, QuizScreenActivity.class);
                 startActivity(rtoqintent);
+            }
+        });
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ResultsActivity.this, HomeFragment.class));
             }
         });
     }

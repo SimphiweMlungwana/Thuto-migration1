@@ -20,8 +20,8 @@
         />
 
     <ImageView
-        android:layout_width="221dp"
-        android:layout_height="214dp"
+        android:layout_width="241dp"
+        android:layout_height="244dp"
         android:src="@drawable/girl_landing_1"
         android:id="@+id/girlLauncher"
         android:layout_below="@id/txtthuto"
@@ -31,7 +31,7 @@
     <EditText
         android:id="@+id/inpEmail"
         android:layout_width="330dp"
-        android:layout_height="68dp"
+        android:layout_height="50dp"
         android:layout_below="@id/girlLauncher"
         android:layout_marginTop="0dp"
         android:textColor="@color/black"
@@ -45,7 +45,7 @@
     <EditText
         android:id="@+id/inppass"
         android:layout_width="330dp"
-        android:layout_height="68dp"
+        android:layout_height="50dp"
         android:layout_below="@id/inpEmail"
         android:fontFamily="@font/mali_semibold"
         android:layout_marginTop="10dp"

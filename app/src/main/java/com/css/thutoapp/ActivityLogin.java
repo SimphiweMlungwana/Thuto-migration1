@@ -15,10 +15,14 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ActivityLogin extends AppCompatActivity {
 
     private FirebaseAuth auth;
+    private FirebaseFirestore db;
+    private FirebaseUser currentUser;
     private EditText loginMail, loginPass;
     private Button loginBtn;
 
@@ -29,6 +33,9 @@ public class ActivityLogin extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         auth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
         loginMail = findViewById(R.id.inpEmail);
         loginPass = findViewById(R.id.inppass);
         loginBtn = findViewById(R.id.btnLogin);
@@ -47,7 +54,6 @@ public class ActivityLogin extends AppCompatActivity {
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(ActivityLogin.this, "Login successful", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(ActivityLogin.this, MainLandingActivity.class));
-                                finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -65,4 +71,5 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
     }
+
 }

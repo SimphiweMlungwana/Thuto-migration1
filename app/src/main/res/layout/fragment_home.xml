@@ -54,6 +54,7 @@
             android:id="@+id/welcome_text_hello"/>
 
         <TextView
+            android:id="@+id/usersname"
             android:layout_width="189dp"
             android:layout_height="54dp"
             android:text="Nathaniel"

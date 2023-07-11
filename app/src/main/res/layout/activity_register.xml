@@ -33,7 +33,7 @@
     <!--Main White background layout start-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1500dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/round_shape_reg_settings"
         android:layout_below="@id/txtthuto"
         android:layout_marginTop="30dp"
@@ -78,17 +78,17 @@
         <!--text layout start-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/rl_regtext"
             android:padding="16dp"
             android:id="@+id/txts">
 
             <EditText
-                android:id="@+id/editTextName"
+                android:id="@+id/editTextFirstName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:background="@drawable/rectangle_textbox"
-                android:hint="First and Last Name"
+                android:hint="First Name"
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:fontFamily="@font/mali_regular"
@@ -96,23 +96,61 @@
                 android:layout_marginBottom="16dp" />
 
             <EditText
-                android:id="@+id/TextEmail"
+                android:id="@+id/editTextLastName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:background="@drawable/rectangle_textbox"
-                android:padding="6dp"
+                android:layout_below="@id/editTextFirstName"
+                android:hint="Last Name"
+                android:inputType="text"
                 android:textColor="@color/black"
-                android:inputType="textEmailAddress"
-                android:hint="Email"
                 android:fontFamily="@font/mali_regular"
-                android:layout_below="@id/editTextName"
+                android:padding="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/Region"
+                android:layout_width="395dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/editTextLastName"
                 android:layout_marginBottom="16dp"
-                />
+                android:background="@drawable/rectangle_textbox"
+                android:fontFamily="@font/mali_regular"
+                android:hint="Region: Africa or UK"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/grade"
+                android:layout_width="395dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/Region"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_textbox"
+                android:fontFamily="@font/mali_regular"
+                android:hint="Grade"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/TextEmail"
+                android:layout_width="395dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/grade"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_textbox"
+                android:fontFamily="@font/mali_regular"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/TextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:hint="Password"
                 android:textColor="@color/black"
                 android:background="@drawable/rectangle_textbox"
