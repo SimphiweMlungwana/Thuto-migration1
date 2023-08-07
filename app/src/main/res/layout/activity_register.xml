@@ -1,190 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_theme_main"
-    tools:context=".RegisterActivity">
-<RelativeLayout
+    tools:context=".RegisterActivity"
+    android:orientation="vertical">
+
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/regScrollView">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/splash_corner"
-        android:id="@+id/right_design"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="thutoEdu"
-        android:textSize="36dp"
-        android:fontFamily="sans-serif-black"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:id="@+id/txtthuto"
-        />
-
-    <!--Main White background layout start-->
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@drawable/round_shape_reg_settings"
-        android:layout_below="@id/txtthuto"
-        android:layout_marginTop="30dp"
-        android:id="@+id/view_whtbcg">
+        android:id="@+id/mainRegRLayout">
 
-        <!--Registration Text layout start-->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rl_regtext">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/splash_corner"
+            android:id="@+id/right_design"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registration"
-                android:layout_centerHorizontal="true"
-                android:paddingVertical="10dp"
-                android:textStyle="bold"
-                android:textColor="@color/maroon_colour"
-                android:fontFamily="@font/mali_bold"
-                android:textSize="30dp"
-                android:id="@+id/tv_regtext">
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Join our educational quiz app and start your knowledge adventure today"
-                android:textSize="16dp"
-                android:padding="16dp"
-                android:fontFamily="@font/mali_regular"
-                android:textColor="@color/black"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                android:layout_below="@id/tv_regtext"
-                android:id="@+id/regslogan">
-            </TextView>
-
-        </RelativeLayout>
-        <!--Registration Text layout start-->
-
-        <!--text layout start-->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/rl_regtext"
-            android:padding="16dp"
-            android:id="@+id/txts">
-
-            <EditText
-                android:id="@+id/editTextFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:background="@drawable/rectangle_textbox"
-                android:hint="First Name"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:fontFamily="@font/mali_regular"
-                android:padding="6dp"
-                android:layout_marginBottom="16dp" />
-
-            <EditText
-                android:id="@+id/editTextLastName"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:background="@drawable/rectangle_textbox"
-                android:layout_below="@id/editTextFirstName"
-                android:hint="Last Name"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:fontFamily="@font/mali_regular"
-                android:padding="6dp"
-                android:layout_marginBottom="16dp" />
-
-            <EditText
-                android:id="@+id/Region"
-                android:layout_width="395dp"
-                android:layout_height="38dp"
-                android:layout_below="@id/editTextLastName"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rectangle_textbox"
-                android:fontFamily="@font/mali_regular"
-                android:hint="Region: Africa or UK"
-                android:inputType="text"
-                android:padding="6dp"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/grade"
-                android:layout_width="395dp"
-                android:layout_height="38dp"
-                android:layout_below="@id/Region"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rectangle_textbox"
-                android:fontFamily="@font/mali_regular"
-                android:hint="Grade"
-                android:inputType="number"
-                android:padding="6dp"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/TextEmail"
-                android:layout_width="395dp"
-                android:layout_height="38dp"
-                android:layout_below="@id/grade"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rectangle_textbox"
-                android:fontFamily="@font/mali_regular"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:padding="6dp"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/TextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:hint="Password"
-                android:textColor="@color/black"
-                android:background="@drawable/rectangle_textbox"
-                android:padding="6dp"
-                android:inputType="textPassword"
-                android:layout_below="@id/TextEmail"
-                android:layout_marginBottom="16dp" />
-
-            <Button
-                android:id="@+id/buttonRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Join Us!"
-                android:layout_below="@id/TextPassword" />
-
-        </RelativeLayout>
-        <!--text layout end-->
         <TextView
-            android:id="@+id/guestlogin_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/txts"
+            android:layout_marginTop="70dp"
+            android:text="thutoEdu"
+            android:textSize="36dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="-69dp"
-            android:fontFamily="@font/mali_bold"
-            android:text="Already have an account? Click Here"
-            android:textColor="#FFF8B735"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/txtthuto"
+            />
+
+        <!--Main White background layout start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_shape_reg_settings"
+            android:layout_below="@id/txtthuto"
+            android:layout_marginTop="30dp"
+            android:id="@+id/view_whtbcg">
+
+            <!--Registration Text layout start-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_regtext">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration"
+                    android:layout_centerHorizontal="true"
+                    android:paddingVertical="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/maroon_colour"
+                    android:fontFamily="@font/mali_bold"
+                    android:textSize="30dp"
+                    android:id="@+id/tv_regtext">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Join our educational quiz app and start your knowledge adventure today"
+                    android:textSize="16dp"
+                    android:padding="16dp"
+                    android:fontFamily="@font/mali_regular"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:layout_below="@id/tv_regtext"
+                    android:id="@+id/regslogan">
+                </TextView>
+
+            </RelativeLayout>
+            <!--Registration Text layout start-->
+
+            <!--text layout start-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_regtext"
+                android:padding="16dp"
+                android:id="@+id/txts">
+
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rectangle_textbox"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mali_regular"
+                    android:padding="6dp"
+                    android:layout_marginBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rectangle_textbox"
+                    android:layout_below="@id/editTextFirstName"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mali_regular"
+                    android:padding="6dp"
+                    android:layout_marginBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/Region"
+                    android:layout_width="395dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/editTextLastName"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_textbox"
+                    android:fontFamily="@font/mali_regular"
+                    android:hint="Region: Africa or UK"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/grade"
+                    android:layout_width="395dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/Region"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_textbox"
+                    android:fontFamily="@font/mali_regular"
+                    android:hint="Grade"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/TextEmail"
+                    android:layout_width="395dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/grade"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rectangle_textbox"
+                    android:fontFamily="@font/mali_regular"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="6dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/TextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:hint="Password"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rectangle_textbox"
+                    android:padding="6dp"
+                    android:inputType="textPassword"
+                    android:layout_below="@id/TextEmail"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Join Us!"
+                    android:layout_below="@id/TextPassword" />
+
+                <TextView
+                    android:id="@+id/guestlogin_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/buttonRegister"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-69dp"
+                    android:fontFamily="@font/mali_bold"
+                    android:text="Already have an account? Click Here"
+                    android:textColor="#FFF8B735"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <!--text layout end-->
+        </RelativeLayout>
+        <!--Main White background layout start-->
     </RelativeLayout>
-    <!--Main White background layout start-->
-</RelativeLayout>
 
 </ScrollView>
+
+</RelativeLayout>

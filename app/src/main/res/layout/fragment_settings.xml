@@ -1,14 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_theme_main"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Settings Fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Settings"
+        android:textSize="21dp"
+        android:fontFamily="@font/mali_bold"
+        android:textColor="@color/maroon_colour"
+        android:id="@+id/settings_txt"/>
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/mainSoundLayout"
+        android:layout_below="@id/settings_txt">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/summary_color"
+            android:paddingVertical="10dp"
+            android:padding="5dp"
+            android:id="@+id/soundCtrlLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sound"
+                android:layout_centerVertical="true"
+                android:textSize="21dp"
+                android:fontFamily="@font/mali_bold"
+                android:textColor="@color/maroon_colour"
+                android:paddingLeft="15dp"
+                android:id="@+id/txtSound"/>
+
+            <Switch
+                android:id="@+id/SoundswtchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:paddingEnd="15sp"
+                android:thumbTint="@color/score_color"
+                android:trackTint="@color/maroon_colour" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:padding="3dp"
+            android:fontFamily="@font/mali_regular"
+            android:textColor="@color/black"
+            android:text="Turn on or off sounds and background music"
+            android:layout_below="@id/soundCtrlLayout"
+            android:paddingStart="20sp"
+            android:id="@+id/txtSoundInst"/>
+    </RelativeLayout>
+    <!--End of sound layout-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/mainSoundLayout"
+        android:id="@+id/NtfctnMainLayout1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/NtfctnMainLayout"
+            android:background="@color/summary_color">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:layout_centerVertical="true"
+                android:textSize="21sp"
+                android:fontFamily="@font/mali_bold"
+                android:textColor="@color/maroon_colour"
+                android:paddingLeft="15dp"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:thumbTint="@color/score_color"
+                android:trackTint="@color/maroon_colour"
+                android:id="@+id/NtfctnswtchBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="15dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:padding="3dp"
+            android:fontFamily="@font/mali_regular"
+            android:textColor="@color/black"
+            android:text="Turn on or off push notifications"
+            android:layout_below="@id/NtfctnMainLayout"
+            android:paddingStart="15dp"
+            android:id="@+id/txtpushNotifcations"/>
+    </RelativeLayout>
+    <!--End of Notfication layout-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/summary_color"
+        android:id="@+id/langMainLayout"
+        android:layout_below="@id/NtfctnMainLayout1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"
+            android:fontFamily="@font/mali_bold"
+            android:textColor="@color/maroon_colour"
+            android:paddingLeft="15dp"
+            android:id="@+id/txtLangMain"/>
+
+        <TextView
+            android:id="@+id/txtLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:fontFamily="@font/mali_regular"
+            android:paddingEnd="15dp"
+            android:layout_centerVertical="true"
+            android:text="English (UK)"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/summary_color"
+        android:id="@+id/accDetlsMainLayout"
+        android:layout_below="@id/langMainLayout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account Details"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"
+            android:fontFamily="@font/mali_bold"
+            android:textColor="@color/maroon_colour"
+            android:paddingLeft="15dp"
+            android:id="@+id/txtACCTDtlsMain"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/personal_details_slt_ic" />
+    </RelativeLayout>
+
+</RelativeLayout>

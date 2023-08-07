@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -36,6 +37,7 @@ public class QuizScreenActivity extends AppCompatActivity {
     private CollectionReference collectionRef;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,11 @@ public class QuizScreenActivity extends AppCompatActivity {
 
         currentPos = random.nextInt(quizModalArrayList.size());
         sendDataToViews(currentPos);
-        
+
+        //scrollview controller
+        ScrollView scrollView = findViewById(R.id.quiz_scrollView);
+        scrollView.setVerticalScrollBarEnabled(true);
+
         option1btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -206,6 +212,8 @@ public class QuizScreenActivity extends AppCompatActivity {
 
         startActivity(qtorintent);
     }
+
+
 
     private void getQuizQuestions(ArrayList<QuizModal> quizModalArrayList) {
         quizModalArrayList.add(new QuizModal("Which of the following sports is Africa known for?", "Cricket",
