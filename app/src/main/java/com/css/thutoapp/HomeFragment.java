@@ -27,6 +27,7 @@ public class HomeFragment extends Fragment{
     RelativeLayout relativeLayout;
     ImageView imageView;
     TextView uname;
+    String userId;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,7 +41,6 @@ public class HomeFragment extends Fragment{
         db = FirebaseFirestore.getInstance();
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        String userId = null;
         if (currentUser != null) {
             userId = currentUser.getUid();
 
@@ -55,7 +55,8 @@ public class HomeFragment extends Fragment{
                         //Toast.makeText(HomeFragment.this,"Error!"+e.getMessage(),Toast.LENGTH_SHORT).show();
                     });
         } else {
-            uname.setText("Guest!");
+            userId = "Guest!";
+            //uname.setText("Guest!");
         }
         uname.setText(userId.toUpperCase());
 

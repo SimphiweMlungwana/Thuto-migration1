@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_theme_main"
     tools:context=".RegisterActivity">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="150dp"
@@ -33,7 +35,7 @@
     <!--Main White background layout start-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/round_shape_reg_settings"
         android:layout_below="@id/txtthuto"
         android:layout_marginTop="30dp"
@@ -130,7 +132,7 @@
                 android:background="@drawable/rectangle_textbox"
                 android:fontFamily="@font/mali_regular"
                 android:hint="Grade"
-                android:inputType="text"
+                android:inputType="number"
                 android:padding="6dp"
                 android:textColor="@color/black" />
 
@@ -183,5 +185,6 @@
             android:textStyle="bold" />
     </RelativeLayout>
     <!--Main White background layout start-->
-
 </RelativeLayout>
+
+</ScrollView>

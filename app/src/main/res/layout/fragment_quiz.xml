@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_theme_main"
     tools:context=".QuizFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_q_layout">
 
     <!--Side Images St-->
     <ImageView
@@ -142,5 +147,6 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/chkbx_btns_layout"
         android:layout_marginTop="25dp"/>
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>
