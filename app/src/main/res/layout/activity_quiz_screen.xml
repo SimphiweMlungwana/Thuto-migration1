@@ -45,7 +45,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quiz Name"
+                    android:text="ThutoEdu"
                     android:textSize="21dp"
                     android:fontFamily="@font/mali_bold"
                     android:layout_centerHorizontal="true"
@@ -71,14 +71,26 @@
                         android:id="@+id/question_attempted"/>
                 </RelativeLayout>
 
-                <ImageView
+                <TextView
+                    android:id="@+id/countdownTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110px"
+                    android:text="10"
+                    android:fontFamily="@font/mali_bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/maroon_colour"
+                    android:layout_below="@+id/quiz_timer_bckground"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <!--<ImageView
                     android:layout_width="110px"
                     android:layout_height="110px"
                     android:src="@drawable/timer_design"
                     android:layout_below="@+id/quiz_timer_bckground"
                     android:layout_marginTop="20dp"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/counter_clock"/>
+                    android:id="@+id/counter_clock"/>-->
 
             </RelativeLayout>
 

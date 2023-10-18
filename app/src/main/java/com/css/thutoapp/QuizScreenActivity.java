@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,8 @@ import java.util.Random;
 
 public class QuizScreenActivity extends AppCompatActivity {
 
-    private TextView questionTV,questionNumberTV;
+    private TextView questionTV,questionNumberTV,countdownTextView;
+    private CountDownTimer countDownTimer;
     private Button option1btn,option2btn,option3btn,option4btn;
     private ArrayList<QuizModal> quizModalArrayList;
     Random random;
@@ -64,6 +66,21 @@ public class QuizScreenActivity extends AppCompatActivity {
         //scrollview controller
         ScrollView scrollView = findViewById(R.id.quiz_scrollView);
         scrollView.setVerticalScrollBarEnabled(true);
+
+        countdownTextView = findViewById(R.id.countdownTextView);
+        countDownTimer = new CountDownTimer(10000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                countdownTextView.setText("Countdown: " + millisUntilFinished / 1000);
+            }
+
+            @Override
+            public void onFinish() {
+                countdownTextView.setText("Countdown: 0");
+            }
+        };
+
+        countDownTimer.start();
 
         option1btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,7 +229,6 @@ public class QuizScreenActivity extends AppCompatActivity {
 
         startActivity(qtorintent);
     }
-
 
 
     private void getQuizQuestions(ArrayList<QuizModal> quizModalArrayList) {

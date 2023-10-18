@@ -25,7 +25,7 @@ public class DetailFragment extends Fragment {
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), QuizScreenActivity.class));
+                startActivity(new Intent(getActivity(), LoadingActivity.class));
             }
         });
         return rootView;

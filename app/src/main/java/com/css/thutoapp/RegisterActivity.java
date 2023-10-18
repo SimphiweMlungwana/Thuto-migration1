@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
         user.put("region",rgn);
 
 
-// Add a new document with a generated ID
+    // Add a new document with a generated ID
         db.collection("users")
                 .add(user)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
