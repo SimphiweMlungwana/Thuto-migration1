@@ -43,6 +43,7 @@ public class HomeFragment extends Fragment{
 
         if (currentUser != null) {
             userId = currentUser.getUid();
+            //userId = currentUser.getDisplayName();
 
             db.collection("users").document(userId).get()
                     .addOnSuccessListener(documentSnapshot -> {

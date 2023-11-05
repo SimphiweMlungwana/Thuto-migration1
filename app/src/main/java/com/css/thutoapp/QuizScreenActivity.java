@@ -71,12 +71,15 @@ public class QuizScreenActivity extends AppCompatActivity {
         countDownTimer = new CountDownTimer(10000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                countdownTextView.setText("Countdown: " + millisUntilFinished / 1000);
+                countdownTextView.setText(millisUntilFinished / 1000+" Seconds left");
             }
 
             @Override
             public void onFinish() {
-                countdownTextView.setText("Countdown: 0");
+                countdownTextView.setText("Timeout!");
+
+                showUnsuccessfulBTS();
+
             }
         };
 
@@ -93,9 +96,9 @@ public class QuizScreenActivity extends AppCompatActivity {
                 }else{
                     showUnsuccessfulBTS();
                 }
-                questionAttempted++;
+                /*questionAttempted++;
                 currentPos = random.nextInt(quizModalArrayList.size());
-                sendDataToViews(currentPos);
+                sendDataToViews(currentPos);*/
             }
         });
 
@@ -110,9 +113,9 @@ public class QuizScreenActivity extends AppCompatActivity {
                 }else{
                     showUnsuccessfulBTS();
                 }
-                questionAttempted++;
+                /*questionAttempted++;
                 currentPos = random.nextInt(quizModalArrayList.size());
-                sendDataToViews(currentPos);
+                sendDataToViews(currentPos);*/
             }
         });
 
@@ -127,9 +130,9 @@ public class QuizScreenActivity extends AppCompatActivity {
                 }else{
                     showUnsuccessfulBTS();
                 }
-                questionAttempted++;
+                /*questionAttempted++;
                 currentPos = random.nextInt(quizModalArrayList.size());
-                sendDataToViews(currentPos);
+                sendDataToViews(currentPos);*/
             }
         });
 
@@ -144,14 +147,17 @@ public class QuizScreenActivity extends AppCompatActivity {
                 }else{
                     showUnsuccessfulBTS();
                 }
-                questionAttempted++;
+                /*questionAttempted++;
                 currentPos = random.nextInt(quizModalArrayList.size());
-                sendDataToViews(currentPos);
+                sendDataToViews(currentPos);*/
             }
         });
     }
 
     private void showUnsuccessfulBTS() {
+        //countdown timer pause
+        countDownTimer.cancel();
+
         //create an unsuccessfull bottomsheet here
         BottomSheetDialog unsucBTSDialog = new BottomSheetDialog(QuizScreenActivity.this);
         View unBTSView = LayoutInflater.from(getApplicationContext()).
@@ -170,6 +176,12 @@ public class QuizScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 unsucBTSDialog.dismiss();
+
+                questionAttempted++;
+                currentPos = random.nextInt(quizModalArrayList.size());
+                sendDataToViews(currentPos);
+
+                countDownTimer.start();
             }
         });
         unsucBTSDialog.setCancelable(false);
@@ -183,6 +195,9 @@ public class QuizScreenActivity extends AppCompatActivity {
                 inflate(R.layout.dialog_correct_answer,(RelativeLayout)findViewById(R.id.correctAnsLayout));
         Button dismissViewBtn = btsView.findViewById(R.id.btn_dismiss_view);
 
+        //countdown timer pause
+        countDownTimer.cancel();
+
         dismissViewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,6 +205,11 @@ public class QuizScreenActivity extends AppCompatActivity {
 
                 bottomSheetDialog.dismiss();
 
+                questionAttempted++;
+                currentPos = random.nextInt(quizModalArrayList.size());
+                sendDataToViews(currentPos);
+
+                countDownTimer.start();
                 //currentPos = random.nextInt(quizModalArrayList.size());
                 //sendDataToViews(currentPos);
             }
@@ -201,7 +221,7 @@ public class QuizScreenActivity extends AppCompatActivity {
 
 
     private void sendDataToViews(int currentPos) {
-        questionNumberTV.setText("Question: "+questionAttempted +"/5\nScore: "+currentScore);
+        questionNumberTV.setText("Question: "+questionAttempted +"/10\nScore: "+currentScore);
         if(questionAttempted==5){
             sendResultsData();
             }else{
