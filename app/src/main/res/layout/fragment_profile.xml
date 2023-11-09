@@ -25,14 +25,14 @@
         <ImageView
             android:id="@+id/profile_photo_main"
             android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:layout_below="@id/profile_set_txt"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="151dp"
             android:scaleType="centerCrop"
             android:background="@drawable/oval_imageview"
-            android:src="@drawable/random_person" />
+            android:src="@drawable/neutral_photo" />
 
         <TextView
             android:id="@+id/profile_main_name_txt"

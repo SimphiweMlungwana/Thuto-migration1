@@ -23,6 +23,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import org.checkerframework.common.subtyping.qual.Bottom;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -154,6 +156,7 @@ public class QuizScreenActivity extends AppCompatActivity {
         });
     }
 
+
     private void showUnsuccessfulBTS() {
         //countdown timer pause
         countDownTimer.cancel();
@@ -164,13 +167,13 @@ public class QuizScreenActivity extends AppCompatActivity {
                 inflate(R.layout.dialog_incorrect_answ,(RelativeLayout)findViewById(R.id.IncorrectAnsLayout));
 
         Button dismissViewUnBtn = unBTSView.findViewById(R.id.btn_dismiss_view_inc);
-        TextView questionTV = unBTSView.findViewById(R.id.txt_quiz);
+        /*TextView questionTV = unBTSView.findViewById(R.id.txt_quiz);
         TextView correctAnsTV = unBTSView.findViewById(R.id.crct_dyn_txt);
         TextView descriptionTV = unBTSView.findViewById(R.id.crct_dyn_descript_txt);
 
         questionTV.setText(quizModalArrayList.get(currentPos).getQuestion());
         correctAnsTV.setText(quizModalArrayList.get(currentPos).getAnswer());
-        descriptionTV.setText(quizModalArrayList.get(currentPos).getDescription());
+        descriptionTV.setText(quizModalArrayList.get(currentPos).getDescription());*/
 
         dismissViewUnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -300,6 +303,13 @@ public class QuizScreenActivity extends AppCompatActivity {
         quizModalArrayList.add(new QuizModal("_____ is considered the most innovative African country",
                 "Senegal","South Africa","Mauritius","Gabon","Mauritius",
                 "Mauritius ranks first in Africa in Global Innovation Index 2022. According to the report, Mauritius emerged the most innovative African country, and climbing seven places to 45th on the Global Innovation Index (GII). Unlike most African countries, the report said Mauritius has a high human development score"));
+
+        quizModalArrayList.add(new QuizModal("Which African country has the best education system?",
+                "Namibia","Tunisia","Seychelles","Rwanda","Seychelles",
+                "Seychelles is the only African country in the top 50 education systems in the world, ranking 43rd ahead of Ukraine, Hungary, Russia, and the United Arab Emirates. It is ranked 28th in the world for Critical Thinking in Teaching and 34th for Graduate Skillset"));
+        quizModalArrayList.add(new QuizModal("Which African leader was imprisoned for 27 years and later became the first democratic president of his country",
+                "Thabo Mbeki","Sir Seretse Goitsebeng Maphiri Khama","Nelson Mandela","Paul Biya","Nelson Mandela",
+                ": Nelson Mandela was South Africa's first democratic president. He was arrested by the Apartheid for sabotage, treason and violent conspiracy to overthrow the government. He spent 27years on Robben Island a remote island on the coast of Cape Town in South Africa which housed the prison for Apartheids political prisoners"));
     }
 
 

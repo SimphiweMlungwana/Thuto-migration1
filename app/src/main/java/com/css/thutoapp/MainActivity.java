@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
                 auth.signOut();
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(new Intent(MainActivity.this, QuestionListActivity.class));
                 startActivity(new Intent(MainActivity.this, MainLandingActivity.class));
                 auth.signOut();
-                finish();
             }
         });
 

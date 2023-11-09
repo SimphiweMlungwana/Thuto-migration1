@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:checked="false"
+                android:checked="true"
                 android:paddingEnd="15sp"
                 android:thumbTint="@color/score_color"
                 android:trackTint="@color/maroon_colour" />

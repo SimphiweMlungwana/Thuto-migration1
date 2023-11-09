@@ -42,7 +42,8 @@ public class HomeFragment extends Fragment{
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (currentUser != null) {
-            userId = currentUser.getUid();
+            //userId = currentUser.getUid();
+            userId = currentUser.getEmail();
             //userId = currentUser.getDisplayName();
 
             db.collection("users").document(userId).get()

@@ -21,7 +21,7 @@
             android:textColor="@color/error_color"
             android:id="@+id/incorrect_view_txt"/>
 
-        <TextView
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Where is the largest volcano on Earth located?"
@@ -78,7 +78,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="25dp"
             android:layout_below="@id/crct_st_description_txt"
-            android:id="@+id/crct_dyn_descript_txt"/>
+            android:id="@+id/crct_dyn_descript_txt"/>-->
 
     <Button
         android:id="@+id/btn_dismiss_view_inc"
@@ -89,7 +89,7 @@
         android:background="@drawable/round_shape_btnnxt"
         android:fontFamily="@font/mali_bold"
         android:text="Dismiss"
-        android:layout_below="@id/crct_dyn_descript_txt"/>
+        android:layout_below="@id/incorrect_view_txt"/>
     </RelativeLayout>
 
 </RelativeLayout>

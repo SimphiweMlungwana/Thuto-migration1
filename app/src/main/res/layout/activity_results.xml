@@ -219,7 +219,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Home"
+            android:text="Retake Quiz"
             android:fontFamily="@font/mali_bold"
             android:background="@drawable/round_shape_btnnxt"
             android:id="@+id/btnshare"/>
@@ -228,7 +228,7 @@
             android:id="@+id/btn_take_newquiz"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Take New Quiz"
+            android:text="New Quiz"
             android:textSize="13sp"
             android:fontFamily="@font/mali_bold"
             android:background="@drawable/round_shape_btnnxt"

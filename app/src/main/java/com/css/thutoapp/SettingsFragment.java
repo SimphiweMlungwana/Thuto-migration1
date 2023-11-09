@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class SettingsFragment extends Fragment {
     private MediaPlayer mediaPlayer;
@@ -29,14 +30,17 @@ public class SettingsFragment extends Fragment {
         aSwitchMusic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    mediaPlayer.setVolume(0.8f,0.8f);
-                    mediaPlayer.start();
-                }else {
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                    mediaPlayer.setVolume(0.0f,0.0f);
+                try {
+                    if(isChecked){
+                        mediaPlayer.start();
+                    }else {
+                        mediaPlayer.release();
+                        mediaPlayer = null;
+                    }
+                }catch (NullPointerException e){
+                    Toast.makeText(getActivity(), "No music playing!", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         return rootView;
